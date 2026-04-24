@@ -4,7 +4,7 @@
 Build a Java application that polls an external API 10 times, handles duplicate event data, aggregates scores per participant, and submits a correct leaderboard.
 
 ## My Approach
-I used a `HashSet` to store unique keys formed by combining `roundId + participant`. Before adding any score, I check if the key already exists — if yes, it's a duplicate and gets ignored. This ensures each round score per participant is counted exactly once.
+I used a `HashSet` to store unique keys formed by combining `roundId + participant`. Before adding any score, I check if the key already exists if yes, it's a duplicate and gets ignored. This ensures each round score per participant is counted exactly once.
 
 ## How It Works
 1. Poll `/quiz/messages` API 10 times (poll 0 to 9) with a 5 second delay between each call
